@@ -1,0 +1,20 @@
+print("Pilih perhitungan:")
+print("1. Luas Segitiga")
+print("2. Luas Persegi Panjang")
+
+pilihan = input("Masukkan pilihan (1/2): ")
+
+if pilihan == '1':
+    alas = float(input("Masukkan alas: "))
+    tinggi = float(input("Masukkan tinggi: "))
+    luas = 0.5 * alas * tinggi
+    print(f"Luas Segitiga: {luas}")
+
+elif pilihan == '2':
+    panjang = float(input("Masukkan panjang: "))
+    lebar = float(input("Masukkan lebar: "))
+    luas = panjang * lebar
+    print(f"Luas Persegi Panjang: {luas}")
+
+else:
+    print("Pilihan tidak valid!")
