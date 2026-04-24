@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Hitung Luas</h3>
+    <select id="pilihan" onchange="tampilkanInput()">
+        <option value="">--Pilih Bangun--</option>
+        <option value="1">Segitiga</option>
+        <option value="2">Persegi Panjang</option>
+    </select>
+
+    <div id="inputArea" style="margin-top: 10px;"></div>
+    <p id="hasil"></p>
+
+    <script>
+        function tampilkanInput() {
+            let p = document.getElementById("pilihan").value;
+            let area = document.getElementById("inputArea");
+            if(p == "1") {
+                area.innerHTML = 'Alas: <input id="v1"> Tinggi: <input id="v2"> <button onclick="hitung(0.5)">Hitung</button>';
+            } else if(p == "2") {
+                area.innerHTML = 'Panjang: <input id="v1"> Lebar: <input id="v2"> <button onclick="hitung(1)">Hitung</button>';
+            }
+        }
+
+        function hitung(faktor) {
+            let v1 = document.getElementById("v1").value;
+            let v2 = document.getElementById("v2").value;
+            document.getElementById("hasil").innerHTML = "Luas: " + (faktor * v1 * v2);
+        }
+    </script>
+</body>
+</html>
